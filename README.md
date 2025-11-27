@@ -57,23 +57,16 @@ Before running the project, ensure you have installed:
 - **Git**
 - (Optional) **Visual Studio Code** or **Visual Studio 2022**
 
-# How to Set Up & Run the Project
+## How to Set Up & Run the Project
 
-These steps allow anyone (including the instructor) to run the project on a fresh computer.
-
-# Clone the repository
+### Clone the repository
 
 ```bash
 git clone https://github.com/minhsuanwu-project/EComLite.git
 cd EComLite
 ```
-## Setup Instructions
 
-This section explains how to configure the database connection, apply EF Core migrations, and run the EComLite application on any machine (Windows, SQL Server Express, .NET 8).
-
----
-
-# Configure the Database Connection
+### Configure the Database Connection
 
 The project includes a development config example file:
 ```
@@ -85,7 +78,7 @@ copy .\EComLite.Web\appsettings.Development.json.example .\EComLite.Web\appsetti
 ```
 Then edit the connection string, Open EComLite.Web/appsettings.Development.json and set the SQL Server connection
 
-# Apply EF Core Database Migrations
+### Apply EF Core Database Migrations
 
 Navigate into the Web project
 ```
@@ -104,7 +97,7 @@ After this step, SQL Server will contain a database named EComLite with the full
 If the database already exists, you may see:
 No migrations were applied. The database is already up to date.
 
-# Run the Application
+### Run the Application
 Make sure you're still inside EComLite.Web
 
 run
