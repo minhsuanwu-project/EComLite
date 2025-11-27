@@ -1,4 +1,4 @@
-# EComLite – GRAD-695 Applied Project
+# EComLite – Applied Project
 
 ## Main Features
 
