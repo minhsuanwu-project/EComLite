@@ -70,7 +70,7 @@ cd EComLite
 
 The project includes a development config example file:
 
-EComLite.Web/appsettings.Development.json.example
+`EComLite.Web/appsettings.Development.json.example`
 
 From the project root (EComLite folder), run:
 ```
@@ -89,24 +89,24 @@ Apply migrations
 dotnet ef database update
 ```
 You should see output like: 
-Applying migration 'InitialIdentitySchema'
-Applying migration 'AddECommerceEntities'
-Done.
+`Applying migration 'InitialIdentitySchema'`
+`Applying migration 'AddECommerceEntities'`
+`Done.`
 
 After this step, SQL Server will contain a database named EComLite with the full schema.
 If the database already exists, you may see:
-No migrations were applied. The database is already up to date.
+`No migrations were applied. The database is already up to date.`
 
 ### Run the Application
-Make sure you're still inside EComLite.Web
+Make sure you're still inside `EComLite.Web`
 
 run
 ```
 dotnet run
 ```
 You will see something similar to:
-Now listening on: https://localhost:7xxx
-Now listening on: http://localhost:5xxx
+`Now listening on: https://localhost:7xxx`
+`Now listening on: http://localhost:5xxx`
 
 Go to the URL printed in the console, you can now use EComLite!
 
