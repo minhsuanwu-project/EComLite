@@ -1,0 +1,58 @@
+﻿@page
+@model LoginModel
+@{
+    ViewData["Title"] = "Sign in";
+    Layout = "/Pages/Shared/_AuthLayout.cshtml"; 
+}
+
+<div class="login-wrapper w-100 d-flex justify-content-center">
+    <div class="card login-card-custom">
+        <div class="card-body">
+            <div class="text-center mb-4">
+                <h2 class="login-title mb-2">Sign in</h2>
+                <p class="text-muted mb-0">Please enter your EcomLite account to continue.</p>
+            </div>
+
+            <form id="account" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger mb-3" role="alert"></div>
+
+                <div class="mb-3">
+                    <label asp-for="Input.Email" class="form-label text-secondary">Email</label>
+                    <input asp-for="Input.Email"
+                           class="form-control login-input"
+                           autocomplete="username"
+                           placeholder="you@example.com" />
+                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                </div>
+
+                <div class="mb-4">
+                    <label asp-for="Input.Password" class="form-label text-secondary">Password</label>
+                    <input asp-for="Input.Password"
+                           class="form-control login-input"
+                           autocomplete="current-password"
+                           placeholder="Enter your password" />
+                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <div class="form-check d-flex align-items-center">
+                        <input asp-for="Input.RememberMe" class="form-check-input" />
+                        <label class="form-check-label ms-2" for="Input_RememberMe">
+                            Remember me?
+                        </label>
+                    </div>
+
+                    <a id="forgot-password" asp-page="./ForgotPassword">Forgot password?</a>
+                </div>
+
+                <button id="login-submit" type="submit" class="btn login-btn-blue text-white w-100">
+                    Log In
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

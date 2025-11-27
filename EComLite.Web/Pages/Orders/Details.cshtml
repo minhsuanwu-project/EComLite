@@ -1,0 +1,56 @@
+﻿@page "{id:guid}"
+@model EComLite.Web.Pages.Orders.DetailsModel
+@{
+    ViewData["Title"] = "Order Details";
+}
+
+<h1 class="mb-4">Order Details</h1>
+
+<div class="card mb-4">
+    <div class="card-body">
+        <h4 class="card-title mb-3">
+            Order # @Model.Order.OrderNumber
+        </h4>
+
+        <dl class="row mb-0">
+            <dt class="col-sm-3">Placed At</dt>
+            <dd class="col-sm-9">@Model.Order.PlacedAt.ToString("MM/dd/yyyy h:mm tt")</dd>
+
+            <dt class="col-sm-3">Status</dt>
+            <dd class="col-sm-9">@Model.Order.Status</dd>
+
+            <dt class="col-sm-3">Total Amount</dt>
+            <dd class="col-sm-9">@Model.Order.TotalAmount.ToString("C")</dd>
+        </dl>
+    </div>
+</div>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Product</th>
+            <th class="text-end">Unit Price</th>
+            <th class="text-end">Qty</th>
+            <th class="text-end">Line Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Order.Items)
+        {
+            <tr>
+                <td>@item.ProductName</td>
+                <td class="text-end">@item.UnitPrice.ToString("C")</td>
+                <td class="text-end">@item.Qty</td>
+                <td class="text-end">@item.LineTotal.ToString("C")</td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <th colspan="3" class="text-end">Total</th>
+            <th class="text-end">@Model.Order.TotalAmount.ToString("C")</th>
+        </tr>
+    </tfoot>
+</table>
+
+<a asp-page="./Index" class="btn btn-outline-secondary">Back to My Orders</a>

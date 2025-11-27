@@ -1,0 +1,20 @@
+﻿@page "{id:guid}"
+@model EComLite.Web.Pages.Products.DetailsModel
+@{
+    ViewData["Title"] = "Product Details";
+}
+
+<h1>@Model.Product.Name</h1>
+
+<p>@Model.Product.Description</p>
+<p class="fw-bold">@Model.Product.Price.ToString("C")</p>
+
+<form method="post" asp-page-handler="AddToCart">
+    <input type="hidden" name="id" value="@Model.Product.ProductId" />
+    <div class="mb-3">
+        <label asp-for="Qty" class="form-label"></label>
+        <input asp-for="Qty" class="form-control" />
+        <span asp-validation-for="Qty" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-success">Add to Cart</button>
+</form>

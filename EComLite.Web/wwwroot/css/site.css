@@ -1,0 +1,273 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+}
+
+
+/* === Auth / Login === */
+
+.auth-body {
+    background-color: #020617;
+    background-image: linear-gradient(to right, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.92)), url("/img/Harrisburg.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    color: #f9fafb;
+}
+
+.auth-header {
+    padding: 18px 0 8px;
+}
+
+    .auth-header .container-fluid {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+
+.auth-logo-text {
+    font-size: 44px;
+    font-weight: 700;
+    letter-spacing: 0.45rem;
+    color: #e5f4ff; /* LOGO Color */
+    text-shadow: 0 4px 14px rgba(15,23,42,0.8);
+}
+
+.auth-subtitle {
+    font-size: 13px;
+    color: #cbd5f5;
+    margin-top: 4px;
+    letter-spacing: 0.03em;
+}
+
+.auth-main {
+    min-height: calc(100vh - 170px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 16px 32px;
+}
+
+.login-card-custom {
+    max-width: 460px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid rgba(148, 163, 184, 0.35);
+    box-shadow: 0 18px 45px rgba(15,23,42,0.65);
+    background: #f9fafb;
+}
+
+    .login-card-custom .card-body {
+        padding: 26px 32px 24px;
+    }
+
+    .login-card-custom .form-label {
+        color: #374151;
+        font-weight: 500;
+    }
+
+.login-title {
+    font-size: 26px;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.login-subtitle-text {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+
+.login-input {
+    background-color: #f9fafb;
+    border-color: #cbd5f5;
+    color: #0f172a;
+    transition: box-shadow 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
+}
+
+    .login-input:focus {
+        background-color: #ffffff;
+        border-color: #2563eb;
+        box-shadow: 0 0 0 0.16rem rgba(37, 99, 235, 0.35);
+    }
+
+
+    .login-input::placeholder {
+        color: #9ca3af;
+        opacity: 1;
+    }
+
+
+.login-btn-blue {
+    background: linear-gradient(135deg, #2563eb, #0ea5e9);
+    border-color: #2563eb;
+    font-weight: 600;
+    transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+}
+
+    .login-btn-blue:hover {
+        background: linear-gradient(135deg, #1d4ed8, #0284c7);
+        box-shadow: 0 8px 20px rgba(37, 99, 235, 0.45);
+        transform: translateY(-1px);
+    }
+
+.auth-footer {
+    background-color: rgba(15, 23, 42, 0.96);
+    padding: 8px 0;
+    font-size: 13px;
+    color: #e5e7eb;
+}
+
+/* Remember me label */
+.login-card-custom .form-check-label {
+    color: #6b7280;
+    font-size: 0.9rem;
+}
+
+/* === Home / Welcome page === */
+
+.home-hero {
+    background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), rgba(15, 23, 42, 0.95));
+    color: #f9fafb;
+    padding: 72px 16px 56px;
+    text-align: center;
+}
+
+.home-hero-inner {
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+.home-hero-title {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+    .home-hero-title span {
+        color: #38bdf8;
+    }
+
+.home-hero-subtitle {
+    font-size: 15px;
+    color: #e5e7eb;
+    margin-bottom: 24px;
+}
+
+.home-hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+}
+
+.home-hero-actions {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+
+    .home-hero-actions .btn {
+        border-radius: 999px; /* pill */
+        padding: 10px 26px;
+        font-weight: 600;
+        font-size: 14px;
+        border-width: 1px;
+    }
+
+.home-primary-btn {
+    background: linear-gradient(135deg, #2563eb, #0ea5e9);
+    border-color: #1d4ed8;
+    color: #ffffff;
+    box-shadow: 0 10px 24px rgba(37, 99, 235, 0.45);
+    transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+}
+
+    .home-primary-btn:hover {
+        background: linear-gradient(135deg, #1d4ed8, #0284c7);
+        border-color: #1d4ed8;
+        color: #ffffff;
+        transform: translateY(-1px);
+        box-shadow: 0 14px 32px rgba(37, 99, 235, 0.55);
+    }
+
+.home-secondary-btn {
+    background: transparent;
+    border-color: rgba(255, 255, 255, 0.65);
+    color: #e5e7eb;
+    backdrop-filter: blur(4px);
+    transition: background-color 0.12s ease, color 0.12s ease, border-color 0.12s ease;
+}
+
+    .home-secondary-btn:hover {
+        background-color: rgba(15, 23, 42, 0.35);
+        border-color: #e5e7eb;
+        color: #ffffff;
+    }
+
+
+.home-hero-meta {
+    font-size: 13px;
+    color: #cbd5f5;
+}
+
+.home-section {
+    padding: 40px 16px 56px;
+    background-color: #f9fafb;
+}
+
+.home-section-header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+    .home-section-header h2 {
+        font-size: 24px;
+        font-weight: 600;
+        color: #111827;
+    }
+
+    .home-section-header p {
+        color: #6b7280;
+    }
+
+.home-feature-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px 18px;
+    box-shadow: 0 8px 22px rgba(15, 23, 42, 0.08);
+    border: 1px solid rgba(148, 163, 184, 0.35);
+    height: 100%;
+}
+
+    .home-feature-card h3 {
+        font-size: 18px;
+        font-weight: 600;
+        color: #0f172a;
+        margin-bottom: 8px;
+    }
+
+    .home-feature-card p {
+        font-size: 14px;
+        color: #6b7280;
+        margin-bottom: 0;
+    }

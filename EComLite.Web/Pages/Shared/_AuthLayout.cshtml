@@ -1,0 +1,47 @@
+﻿@{
+    Layout = null;
+    var title = ViewData["Title"] ?? "Sign in";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@title - EComLite</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Font -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" />
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+
+<body class="auth-body">
+
+    <header class="auth-header">
+        <div class="container-fluid px-5 py-3">
+            <div class="d-flex flex-column align-items-start">
+                <div class="auth-logo-text">EComLite</div>
+                <div class="auth-subtitle">GRAD695 - Applied Project</div>
+            </div>
+        </div>
+    </header>
+
+    <main class="auth-main">
+        @RenderBody()
+    </main>
+
+    <footer class="auth-footer">
+        <div class="container-fluid d-flex justify-content-between text-white px-5">
+            <span>© @DateTime.UtcNow.Year EComLite Demo</span>
+            <span>Contact: MWu17@my.harrisburgu.edu</span>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,23 @@
+﻿@page
+@model EComLite.Web.Pages.Products.IndexModel
+@{
+    ViewData["Title"] = "Products";
+}
+
+<h1>Products</h1>
+
+<div class="row">
+    @foreach (var p in Model.Products)
+    {
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">@p.Name</h5>
+                    <p class="card-text">@p.Description</p>
+                    <p class="card-text fw-bold">@p.Price.ToString("C")</p>
+                    <a asp-page="Details" asp-route-id="@p.ProductId" class="btn btn-primary">View</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>

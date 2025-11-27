@@ -1,0 +1,51 @@
+﻿@page
+@model EComLite.Web.Pages.Orders.IndexModel
+@{
+    ViewData["Title"] = "My Orders";
+}
+
+<h1>My Orders</h1>
+
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-success">@TempData["Message"]</div>
+}
+
+@if (!Model.Orders.Any())
+{
+    <p>You have no orders yet.</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Order #</th>
+            <th class="text-center">Qty</th>           
+            <th>Total Amount</th>
+            <th>Placed At</th>
+            <th>Status</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var o in Model.Orders)
+        {
+            <tr>
+                <td>
+                    <!-- Use column OrderNumber as link -->
+                    <a asp-page="./Details" asp-route-id="@o.OrderId">
+                        @o.OrderNumber
+                    </a>
+                </td>
+                <td class="text-center">
+                    @o.TotalQty
+                </td>               
+                <td>@o.TotalAmount.ToString("C")</td>
+                <td>@o.PlacedAt.ToLocalTime()</td>
+                <td>@o.Status</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+

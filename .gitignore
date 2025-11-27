@@ -1,0 +1,25 @@
+
+bin/
+obj/
+
+# VS / VS Code
+.vs/
+*.user
+*.suo
+
+
+*.log
+
+
+appsettings.Development.json
+appsettings.Local.json
+
+
+**/secrets.json
+
+
+node_modules/
+
+
+*.db
+*.sqlite
