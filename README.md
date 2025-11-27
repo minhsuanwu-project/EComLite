@@ -76,7 +76,7 @@ From the project root (EComLite folder), run:
 ```
 copy .\EComLite.Web\appsettings.Development.json.example .\EComLite.Web\appsettings.Development.json
 ```
-Then edit the connection string, Open EComLite.Web/appsettings.Development.json and set the SQL Server connection
+Then edit the connection string, Open `EComLite.Web/appsettings.Development.json` and set the SQL Server connection
 
 ### Apply EF Core Database Migrations
 
