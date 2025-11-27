@@ -69,9 +69,9 @@ cd EComLite
 ### Configure the Database Connection
 
 The project includes a development config example file:
-```
+
 EComLite.Web/appsettings.Development.json.example
-```
+
 From the project root (EComLite folder), run:
 ```
 copy .\EComLite.Web\appsettings.Development.json.example .\EComLite.Web\appsettings.Development.json
